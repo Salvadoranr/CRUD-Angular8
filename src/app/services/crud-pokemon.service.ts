@@ -22,4 +22,7 @@ export class CrudPokemonService {
   public getpokemonsList(): IPokemon[] {
     return this.pokemonsList;
   }
+  public addPokemon(pokemon: IPokemon): void  {
+    this.pokemonsList.unshift(pokemon);
+  }
 }

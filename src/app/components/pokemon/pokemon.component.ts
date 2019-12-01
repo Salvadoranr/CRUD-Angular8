@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { IPokemon } from 'src/app/interfaces/pokemon.interface';
+import { IPokemon } from '../../interfaces/pokemon.interface';
 
 @Component({
   selector: 'app-pokemon',
@@ -17,7 +17,9 @@ export class PokemonComponent implements OnInit {
     this.pokemonWeigth = 'Weigth';
     this.pokemonType = 'Type';
     this.pokemonSkills = 'Skills';
+   
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 }
