@@ -1,0 +1,29 @@
+<form [formGroup]="pokemonForm" (ngSubmit)="onFormSubmit(pokemonForm.value)">
+    <label for="name">
+      <p>Name</p>
+      <input type="text" id="name" formControlName="name"  />
+    </label>
+    <label for="image">
+      <p>Image</p>
+      <input type="text" id="image" formControlName="image" />
+    </label>
+    <label for="weight">
+      <p>Weight</p>
+      <input type="number" id="weight" formControlName="weight" />
+    </label>
+    <label for="id">
+      <p>Pokemon number</p>
+      <input type="text" id="id" formControlName="id" />
+    </label>
+    <label for="type">
+      <p>Type</p>
+      <input type="text" id="type" formControlName="type" />
+    </label>
+    <label for="moves">
+      <p>skill</p>
+      <input type="text" id="moves" formControlName="moves" />
+      
+    </label>
+    <button type="submit">View</button>
+  </form>
+  

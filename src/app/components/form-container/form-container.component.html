@@ -1,0 +1,8 @@
+<div class="comp__form-container">
+    <app-pokemon-form (formHandler)="onFormSubmit($event)"></app-pokemon-form>
+    <app-pokemon [pokemon]="pokemon"></app-pokemon>
+</div>
+
+<div class="comp__form-container--button">
+  <button (click)="createPokemon()">Create Pokemon</button>
+</div>

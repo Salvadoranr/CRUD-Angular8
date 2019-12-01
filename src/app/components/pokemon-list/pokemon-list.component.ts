@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IPokemon } from '../../interfaces/pokemon.interface';
-import { CrudPokemonService } from 'src/app/services/crud-pokemon.service';
+import { CrudPokemonService } from '../../services/crud-pokemon.service';
 
 @Component({
   selector: 'app-pokemon-list',

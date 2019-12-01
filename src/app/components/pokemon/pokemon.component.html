@@ -7,7 +7,7 @@
     {{pokemonNumber}}: {{pokemon.id}}
   </span>
   <span style="display: block; font-weight: bolder;">
-    {{pokemonWeigth}}: {{pokemon.weigth}}
+    {{pokemonWeigth}}: {{pokemon.weight}}
   </span>
   <span style="display: block; font-weight: bolder;">
     {{pokemonType}}: {{pokemon.type}}
@@ -19,6 +19,6 @@
             {{skill}}
         </span> 
       </div>
-      <a href="">...</a>
+      <span  *ngIf="pokemon.moves.length > 5">...</span>
   </span>
 </div>
