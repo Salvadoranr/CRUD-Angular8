@@ -47,3 +47,6 @@ Thumbs.db
 
 #beautifier
 .prettierrc
+
+#extract info mock
+/src/app/api/extract-info.js

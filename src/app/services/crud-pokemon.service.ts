@@ -17,7 +17,7 @@ export class CrudPokemonService {
   }
 
   public getInitialResponse(): void {
-    this.pokemonsList = apiResponse.map(el => el.pokemon);
+    this.pokemonsList = apiResponse;
   }
   public getpokemonsList(): IPokemon[] {
     return this.pokemonsList;

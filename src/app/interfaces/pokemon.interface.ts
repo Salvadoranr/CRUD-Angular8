@@ -1,4 +1,8 @@
 export interface IPokemon {
+  id: number;
+  moves: string[];
   name: string;
-  url: string;
+  image: string;
+  weight: number;
+  type: string;
 }
