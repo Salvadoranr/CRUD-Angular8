@@ -1,6 +1,24 @@
 <div class="comp__pokemon-container">
   <figure>
-    <img [src]="url" loading="lazy" alt="imagen de {{ name }}" />
+    <img [src]="pokemon.image" loading="lazy" alt="imagen de {{ pokemon.name }}" />
   </figure>
-  <h4>{{ name | uppercase }}</h4>
+  <h4>{{ pokemon.name | uppercase }}</h4>
+  <span style="display: block; font-weight: bolder;">
+    {{pokemonNumber}}: {{pokemon.id}}
+  </span>
+  <span style="display: block; font-weight: bolder;">
+    {{pokemonWeigth}}: {{pokemon.weigth}}
+  </span>
+  <span style="display: block; font-weight: bolder;">
+    {{pokemonType}}: {{pokemon.type}}
+  </span>
+  <span style="display: block; font-weight: bolder;">
+    {{pokemonSkills}}: 
+      <div *ngFor="let skill of pokemon.moves | slice:0:5">
+        <span style="font-weight: 300;">
+            {{skill}}
+        </span> 
+      </div>
+      <a href="">...</a>
+  </span>
 </div>
