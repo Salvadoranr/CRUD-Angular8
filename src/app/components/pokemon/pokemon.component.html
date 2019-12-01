@@ -2,7 +2,10 @@
   <figure>
     <img [src]="pokemon.image" loading="lazy" alt="imagen de {{ pokemon.name }}" />
   </figure>
-  <h4>{{ pokemon.name | uppercase }}</h4>
+  <div>
+    <h4>{{ pokemon.name | uppercase }}</h4>
+    <a href="pokemon-update/{{pokemon.id}}">Edit</a>
+  </div>
   <span style="display: block; font-weight: bolder;">
     {{pokemonNumber}}: {{pokemon.id}}
   </span>

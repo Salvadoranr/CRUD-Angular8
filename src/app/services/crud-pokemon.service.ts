@@ -22,7 +22,19 @@ export class CrudPokemonService {
   public getpokemonsList(): IPokemon[] {
     return this.pokemonsList;
   }
-  public addPokemon(pokemon: IPokemon): void  {
+  public getPokemonById(id: string): IPokemon {
+    // tslint:disable-next-line: radix
+    return this.pokemonsList.find(el => el.id === parseInt(id));
+  }
+  public addPokemon(pokemon: IPokemon): void {
     this.pokemonsList.unshift(pokemon);
+  }
+  public updatePokemon(pokemon: IPokemon): void {
+    // tslint:disable-next-line: radix
+    this.pokemonsList.forEach((el: IPokemon, index: number) => {
+      if (el.id === pokemon.id) {
+        this.pokemonsList[index] = pokemon;
+      }
+    });
   }
 }

@@ -1,7 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { IPokemon } from '../../interfaces/pokemon.interface';
 import { FormBuilder, FormGroup, FormControlName } from '@angular/forms';
-import { BindingFormService } from 'src/app/services/binding-form.service';
 
 @Component({
   selector: 'app-pokemon-form',
@@ -11,8 +10,8 @@ import { BindingFormService } from 'src/app/services/binding-form.service';
 export class PokemonFormComponent implements OnInit {
   @Input() name = '';
   @Input() image = '';
-  @Input() weigth = 0;
-  @Input() move = [];
+  @Input() weight = 0;
+  @Input() moves = [];
   @Input() type = '';
   @Input() id = 0;
   @Output() formHandler = new EventEmitter<IPokemon>();
@@ -28,8 +27,8 @@ export class PokemonFormComponent implements OnInit {
     this.pokemonForm = this.formBuilder.group({
       name: [this.name],
       image: [this.image],
-      weight: [this.weigth],
-      moves: [this.move],
+      weight: [this.weight],
+      moves: [this.moves],
       type: [this.type],
       id: [this.id]
     });
@@ -48,7 +47,7 @@ export class PokemonFormComponent implements OnInit {
   onFormSubmit(values: IPokemon) {
     const pokemonValue: IPokemon = this.formatFormValues(values);
     this.formHandler.emit(pokemonValue);
-    this.pokemonForm.reset();
+    // this.pokemonForm.reset();
   }
   
 }
