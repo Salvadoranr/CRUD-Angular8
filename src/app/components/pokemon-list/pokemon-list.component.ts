@@ -14,8 +14,9 @@ export class PokemonListComponent implements OnInit {
    }
 
   ngOnInit() {
-    this.pokemonList = this.crud.getpokemonsList();
-    console.log(this.pokemonList);
+    if(!this.pokemonList.length){
+      this.pokemonList = this.crud.getpokemonsList();
+    }
   }
 
 }

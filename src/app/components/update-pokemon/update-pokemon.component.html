@@ -1,0 +1,12 @@
+<app-pokemon-form
+  [id]="pokemon.id"
+  [moves]="pokemon.moves"
+  [name]="pokemon.name"
+  [image]="pokemon.image"
+  [weight]="pokemon.weight"
+  [type]="pokemon.type"
+  (formHandler)="onFormSubmit($event)"
+></app-pokemon-form>
+<app-pokemon [pokemon]="pokemon"></app-pokemon>
+
+<button (click)="setPokemon()">Update Pokemon</button>
