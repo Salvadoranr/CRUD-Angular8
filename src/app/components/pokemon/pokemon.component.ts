@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { IPokemon } from '../../interfaces/pokemon.interface';
+import { CrudPokemonService } from '../../services/crud-pokemon.service';
 
 @Component({
   selector: 'app-pokemon',
@@ -12,14 +13,15 @@ export class PokemonComponent implements OnInit {
   pokemonWeigth: string;
   pokemonType: string;
   pokemonSkills: string;
-  constructor() {
+  constructor(private crud: CrudPokemonService) {
     this.pokemonNumber = 'Numero';
     this.pokemonWeigth = 'Weigth';
     this.pokemonType = 'Type';
     this.pokemonSkills = 'Skills';
-   
   }
 
-  ngOnInit() {
+  ngOnInit() {}
+  delete() {
+    this.crud.deletePokemon(this.pokemon.id);
   }
 }

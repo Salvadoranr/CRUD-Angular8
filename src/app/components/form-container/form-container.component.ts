@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IPokemon } from '../../interfaces/pokemon.interface';
 import { CrudPokemonService } from '../../services/crud-pokemon.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-form-container',
@@ -9,7 +10,7 @@ import { CrudPokemonService } from '../../services/crud-pokemon.service';
 })
 export class FormContainerComponent implements OnInit {
   public pokemon: IPokemon;
-  constructor(private crud: CrudPokemonService) {
+  constructor(private crud: CrudPokemonService, private router: Router) {
     this.pokemon = {
       id: 0,
       moves: [],
@@ -25,7 +26,8 @@ export class FormContainerComponent implements OnInit {
   onFormSubmit(pokemon: IPokemon) {
     this.pokemon = pokemon;
   }
-  createPokemon(): void{
+  createPokemon(): void {
     this.crud.addPokemon(this.pokemon);
+    this.router.navigate(['/pokemon-list']);
   }
 }
