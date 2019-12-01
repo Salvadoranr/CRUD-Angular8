@@ -9,9 +9,10 @@ import { PokemonFormComponent } from './components/pokemon-form/pokemon-form.com
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormContainerComponent } from './components/form-container/form-container.component';
 import { UpdatePokemonComponent } from './components/update-pokemon/update-pokemon.component';
+import { HeaderComponent } from './commons/header/header.component';
 
 @NgModule({
-  declarations: [AppComponent, PokemonListComponent, PokemonComponent, PokemonFormComponent, FormContainerComponent, UpdatePokemonComponent],
+  declarations: [AppComponent, PokemonListComponent, PokemonComponent, PokemonFormComponent, FormContainerComponent, UpdatePokemonComponent, HeaderComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent]
