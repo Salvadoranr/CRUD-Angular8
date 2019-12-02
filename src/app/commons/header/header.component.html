@@ -1,10 +1,23 @@
 <nav class="comp__header-container">
+    <figure>
+        <img src="../../../assets/images/Pokémon_logo.svg.png" width="150px" alt="" />
+      </figure>
   <div class="comp__header-div-container">
+      <a
+      [ngClass]="{ 'comp__header-a': true, clicked: clickH }"
+      title="pokemon list"
+      [routerLink]="['/']"
+      (click)="clickH = true; clickF = false; clickL =false"
+    >
+      <div class="option--box">
+        Home
+      </div>
+    </a>
     <a
       [ngClass]="{ 'comp__header-a': true, clicked: clickL }"
       title="pokemon list"
       [routerLink]="['/pokemon-list']"
-      (click)="clickL = true; clickF = false"
+      (click)="clickL = true; clickF = false; clickH=false"
     >
       <div class="option--box">
         Read Pokemon
@@ -14,14 +27,12 @@
       [ngClass]="{ 'comp__header-a': true, clicked: clickF }"
       title="pokemon form"
       [routerLink]="['/pokemon-form']"
-      (click)="clickF = true; clickL = false"
+      (click)="clickF = true; clickL = false; clickH =false"
     >
       <div class=" option--box">
         Create Pokemon
       </div>
     </a>
   </div>
-  <figure>
-    <img src="../../../assets/images/Pokémon_logo.svg.png" width="150px" alt="" />
-  </figure>
+  
 </nav>

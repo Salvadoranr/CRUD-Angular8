@@ -9,7 +9,7 @@
   </figure>
   <div>
     <h4>{{ pokemon.name | uppercase }}</h4>
-    <div class="container_icons">
+    <div class="container_icons"  *ngIf="editMode">
 
       <a [routerLink]="['/pokemon-update', pokemon.id]">
         <img class="icon_resize" src="../../../assets/images/edit.svg" alt="pencil icon" />

@@ -10,9 +10,19 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormContainerComponent } from './components/form-container/form-container.component';
 import { UpdatePokemonComponent } from './components/update-pokemon/update-pokemon.component';
 import { HeaderComponent } from './commons/header/header.component';
+import { FilterPokemonPipe } from './pipes/filter-pokemon.pipe';
 
 @NgModule({
-  declarations: [AppComponent, PokemonListComponent, PokemonComponent, PokemonFormComponent, FormContainerComponent, UpdatePokemonComponent, HeaderComponent],
+  declarations: [
+    AppComponent,
+    PokemonListComponent,
+    PokemonComponent,
+    PokemonFormComponent,
+    FormContainerComponent,
+    UpdatePokemonComponent,
+    HeaderComponent,
+    FilterPokemonPipe
+  ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent]

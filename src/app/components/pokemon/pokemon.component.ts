@@ -9,6 +9,7 @@ import { CrudPokemonService } from '../../services/crud-pokemon.service';
 })
 export class PokemonComponent implements OnInit {
   @Input() pokemon: IPokemon;
+  @Input() editMode: boolean;
   pokemonNumber: string;
   pokemonWeigth: string;
   pokemonType: string;

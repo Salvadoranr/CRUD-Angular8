@@ -1,8 +1,11 @@
+<div>
 <div class="comp__form-container">
     <app-pokemon-form (formHandler)="onFormSubmit($event)"></app-pokemon-form>
-    <app-pokemon [pokemon]="pokemon"></app-pokemon>
+    <app-pokemon [pokemon]="pokemon" ></app-pokemon>
 </div>
 
 <div class="comp__form-container-move-right">
   <button class= "comp__form-container--button"(click)="createPokemon()">Create Pokemon</button>
+</div>
+
 </div>
