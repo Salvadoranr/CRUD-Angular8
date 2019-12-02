@@ -6,7 +6,7 @@
     </p>
   </div>
   <div class="comp__pokemon-list--container-cards">
-    <div *ngFor="let pokemon of pokemonList | filterPokemon: filter">
+    <div *ngFor="let pokemon of pokemonList "> <!-- | filterPokemon: filter -->
       <app-pokemon [pokemon]="pokemon" [editMode]="true"></app-pokemon>
     </div>
   </div>

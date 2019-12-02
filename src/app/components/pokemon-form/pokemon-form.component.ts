@@ -39,7 +39,7 @@ export class PokemonFormComponent implements OnInit {
       id: values.id,
       image: values.image,
       weight: values.weight,
-      moves: this.convertToArray(values.moves),
+      moves: Array.isArray(values.moves) ? values.moves : this.convertToArray(values.moves),
       name: values.name,
       type: values.type
     };

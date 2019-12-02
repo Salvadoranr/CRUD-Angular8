@@ -28,7 +28,6 @@ export class FormContainerComponent implements OnInit {
   }
   createPokemon(): void {
     this.crud.addPokemon(this.pokemon);
-    console.log(this.pokemon)
     this.router.navigate(['/pokemon-list']);
   }
 }

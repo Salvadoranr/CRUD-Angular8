@@ -40,7 +40,7 @@ export class CrudPokemonService {
   public deletePokemon(id: number): void {
     this.pokemonsList.forEach((el: IPokemon, index: number) => {
       if (el.id === id) {
-        this.pokemonsList.splice(index, 1);
+       this.pokemonsList.splice(index, 1);
       }
     });
   }
