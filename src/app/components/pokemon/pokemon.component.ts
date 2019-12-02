@@ -15,7 +15,7 @@ export class PokemonComponent implements OnInit {
   pokemonType: string;
   pokemonSkills: string;
   constructor(private crud: CrudPokemonService) {
-    this.pokemonNumber = 'Numero';
+    this.pokemonNumber = 'Number';
     this.pokemonWeigth = 'Weigth';
     this.pokemonType = 'Type';
     this.pokemonSkills = 'Skills';

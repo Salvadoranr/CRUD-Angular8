@@ -11,6 +11,7 @@ import { FormContainerComponent } from './components/form-container/form-contain
 import { UpdatePokemonComponent } from './components/update-pokemon/update-pokemon.component';
 import { HeaderComponent } from './commons/header/header.component';
 import { FilterPokemonPipe } from './pipes/filter-pokemon.pipe';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FilterPokemonPipe } from './pipes/filter-pokemon.pipe';
     FormContainerComponent,
     UpdatePokemonComponent,
     HeaderComponent,
-    FilterPokemonPipe
+    FilterPokemonPipe,
+    HomeComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],

@@ -27,7 +27,7 @@
   <span class="comp__pokemon-span-separator skills">
     {{ pokemonSkills }}:
     <div class =" skills--separate" *ngFor="let skill of pokemon.moves | slice: 0:5">
-      <span style="font-weight: 300;">
+      <span class="skills--span">
         {{ skill }}
       </span>
     </div>

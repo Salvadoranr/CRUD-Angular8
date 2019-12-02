@@ -1,4 +1,6 @@
-.comp__update-pokemon-container {
+.comp__update-pokemon-container-all {
+  min-height: 88vh;
+  .comp__update-pokemon-container {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -16,3 +18,4 @@
       font-size: 1.5em;
     }
   }
+}
