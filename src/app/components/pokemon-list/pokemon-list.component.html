@@ -1,12 +1,7 @@
 <div class="comp__pokemon-list--container">
-  <div class="comp__pokemon-list--container-input">
-    <label class="comp__pokemon-list-label" for="find">find pokemon:</label>
-    <p>
-      <input class="comp__pokemon-list-input" type="text" id="find" [(ngModel)]="filter" />
-    </p>
-  </div>
+  
   <div class="comp__pokemon-list--container-cards">
-    <div *ngFor="let pokemon of pokemonList "> <!-- | filterPokemon: filter -->
+    <div *ngFor="let pokemon of pokemonList "> 
       <app-pokemon [pokemon]="pokemon" [editMode]="true"></app-pokemon>
     </div>
   </div>
