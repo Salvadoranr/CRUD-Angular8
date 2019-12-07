@@ -1,15 +1,9 @@
-<nav>
-  <a title="pokemon list" [routerLink]="['/pokemon-list']">
-    <button>
-      Read Pokemon 
-    </button>
-  </a>
-  <a title="pokemon form" [routerLink]="['/pokemon-form']">
-    <button>
-      Create Pokemon
-    </button>
-  </a>
-</nav>
+<div class="main_background">
 
-<router-outlet></router-outlet>
+ <app-header></app-header>
+ <!-- <div style="height: 80vh;"
+ ></div> -->
+  
+  <router-outlet></router-outlet>
 
+</div>  

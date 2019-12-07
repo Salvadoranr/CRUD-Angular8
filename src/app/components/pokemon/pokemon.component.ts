@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { IPokemon } from '../../interfaces/pokemon.interface';
+import { CrudPokemonService } from '../../services/crud-pokemon.service';
 
 @Component({
   selector: 'app-pokemon',
@@ -8,18 +9,20 @@ import { IPokemon } from '../../interfaces/pokemon.interface';
 })
 export class PokemonComponent implements OnInit {
   @Input() pokemon: IPokemon;
+  @Input() editMode: boolean;
   pokemonNumber: string;
   pokemonWeigth: string;
   pokemonType: string;
   pokemonSkills: string;
-  constructor() {
-    this.pokemonNumber = 'Numero';
+  constructor(private crud: CrudPokemonService) {
+    this.pokemonNumber = 'Number';
     this.pokemonWeigth = 'Weigth';
     this.pokemonType = 'Type';
     this.pokemonSkills = 'Skills';
-   
   }
 
-  ngOnInit() {
+  ngOnInit() {}
+  delete() {
+    this.crud.deletePokemon(this.pokemon.id);
   }
 }

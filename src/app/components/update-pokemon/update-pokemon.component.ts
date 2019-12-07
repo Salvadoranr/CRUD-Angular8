@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { CrudPokemonService } from '../../services/crud-pokemon.service';
-import { IPokemon } from 'src/app/interfaces/pokemon.interface';
+import { IPokemon } from '../../interfaces/pokemon.interface';
 
 @Component({
   selector: 'app-update-pokemon',
@@ -12,7 +12,8 @@ export class UpdatePokemonComponent implements OnInit {
   pokemon: IPokemon;
   constructor(
     private crud: CrudPokemonService,
-    private activeRouter: ActivatedRoute
+    private activeRouter: ActivatedRoute,
+    private router: Router
 
   ) {
     this.pokemon = {
@@ -36,5 +37,6 @@ export class UpdatePokemonComponent implements OnInit {
   }
   setPokemon(): void{
     this.crud.updatePokemon(this.pokemon);
+    this.router.navigate(['/pokemon-list']);
   }
 }

@@ -1,8 +1,44 @@
-.comp__pokemon-container{
-    width: 200px;
-    background: lightgrey;
-    border-radius: 2em;
-    text-align: center;
-    min-height: 200px;
-    
+.comp__pokemon-container {
+  width: 200px;
+  margin: 2.5em 2em;
+  background: #f1cd38;
+  border-radius: 2em;
+  text-align: center;
+  min-height: 492px;
+  box-shadow: 0px 0px 15px 9px rgba(112, 108, 22, 0.94);
+
+  .comp__pokemon-image {
+    margin-top: 1.5em;
+    background: black;
+    border-radius: 1em;
+    width: 150px;
+  }
+  .comp__pokemon-figure-margin {
+    margin: 0;
+  }
+  .icon_resize {
+    width: 1em;
+  }
+  .container_icons {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 4.5em;
+    margin-bottom: 1em;
+  }
+  .comp__pokemon-span-separator {
+    margin-bottom: 0.5em;
+    display: block;
+    font-weight: bolder;
+    text-align: left;
+    padding-left: 2em;
+    &.skills{
+        padding-bottom: 1.5em;
+    }
+    .skills--separate{
+        padding-left: 2em;
+    }
+    .skills--span{
+      font-weight: 300;
+    }
+  }
 }

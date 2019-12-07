@@ -11,6 +11,7 @@ import { IPokemon } from '../interfaces/pokemon.interface';
 })
 export class CrudPokemonService {
   public pokemonsList: IPokemon[];
+  public allMoves: string[];
   constructor() {
     this.pokemonsList = [];
     this.getInitialResponse();
@@ -18,6 +19,7 @@ export class CrudPokemonService {
 
   public getInitialResponse(): void {
     this.pokemonsList = apiResponse;
+    this.allMoves = this.getAllMoves();
   }
   public getpokemonsList(): IPokemon[] {
     return this.pokemonsList;
@@ -36,5 +38,17 @@ export class CrudPokemonService {
         this.pokemonsList[index] = pokemon;
       }
     });
+  }
+  public deletePokemon(id: number): void {
+    this.pokemonsList.forEach((el: IPokemon, index: number) => {
+      if (el.id === id) {
+        this.pokemonsList.splice(index, 1);
+      }
+    });
+  }
+  public getAllMoves() {
+    const movesSet = new Set(this.pokemonsList.reduce((acc, el) => acc.concat(el.moves), []));
+    const allMoves = new Array(...movesSet);
+    return allMoves;
   }
 }
