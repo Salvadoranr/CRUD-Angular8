@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { apiResponse } from '../api/api-mock';
 import { IPokemon } from '../interfaces/pokemon.interface';
-import { access } from 'fs';
 
 // const baseUrl = 'https://pokeapi.co/api/v2/';
 // const pokemonUrl = `${baseUrl}pokemon/`;
