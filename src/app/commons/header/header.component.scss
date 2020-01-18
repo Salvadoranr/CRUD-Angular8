@@ -1,6 +1,7 @@
+@import '../../../styles.scss';
 .comp__header-container {
   display: flex;
-  background-color: #f1cd38;
+  background-color: $color-yellow;
   font-size: 16px;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -9,18 +10,18 @@
   }
   .comp__header-a {
     text-decoration: none;
-    color: black;
+    color: $black;
     font-family: fantasy;
     display: block;
   }
   .comp__header-a:hover {
-    background-color: black;
-    color: white;
+    background-color: $black;
+    color: $white;
     border-radius: 1em 1em 0px 0px;
   }
   .clicked {
-    background-color: black;
-    color: white;
+    background-color: $black;
+    color: $white;
     border-radius: 1em 1em 0px 0px;
   }
   .option--box {

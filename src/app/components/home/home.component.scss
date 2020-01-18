@@ -1,5 +1,6 @@
+@import '../../../styles.scss';
 h1,h3,p{
-    color:rgb(230, 216, 23);
+    color:$light-yellow;
 }
 div{
     text-align: center;
