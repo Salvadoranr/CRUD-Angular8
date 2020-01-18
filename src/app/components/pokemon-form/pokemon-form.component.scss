@@ -1,0 +1,28 @@
+@import '../../../styles.scss';
+.comp_pokemon-from-container {
+  .comp_pokemon-from-label--color {
+    color: $white;
+  }
+  .button-view {
+    width: 100%;
+    margin-top: 1em;
+    padding: 0.5em 0;
+    background-color: $color-yellow;
+    border: none;
+    border-radius: 0.5em;
+  }
+  .comp__pokemon-form-input{
+    border: none;
+    border-radius: 0.5em;
+    height: 1.5em;
+    padding-left:1em ;
+  }
+  .comp__pokemon-form-size{
+    border: none;
+    border-radius: 0.5em;
+    height: 1.5em;
+    padding-left:1em ;
+    margin-top:0.25em;
+    width: 100%;
+  }
+}

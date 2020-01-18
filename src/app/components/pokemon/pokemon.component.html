@@ -1,0 +1,35 @@
+<div class="comp__pokemon-container">
+  <figure class="comp__pokemon-figure-margin">
+    <img
+      class="comp__pokemon-image"
+      [src]="pokemon.image"
+      loading="lazy"
+      alt="imagen de {{ pokemon.name }}"
+    />
+  </figure>
+  <div>
+    <h4>{{ pokemon.name | uppercase }}</h4>
+    <div class="container_icons"  *ngIf="editMode">
+
+      <a [routerLink]="['/pokemon-update', pokemon.id]">
+        <img class="icon_resize" src="../../../assets/images/edit.svg" alt="pencil icon" />
+      </a>
+      <a [routerLink]="['/pokemon-list']"(click)="delete()">
+        <img class="icon_resize" src="../../../assets/images/delete.svg" alt="trash icon" />
+      </a>
+    </div>
+  </div>
+  <span class="comp__pokemon-span-separator"> {{ pokemonNumber }}: {{ pokemon.id }} </span>
+  <span class="comp__pokemon-span-separator">
+    {{ pokemonWeigth }}: {{ pokemon.weight }}
+  </span>
+  <span class="comp__pokemon-span-separator"> {{ pokemonType }}: {{ pokemon.type }} </span>
+  <span class="comp__pokemon-span-separator skills">
+    {{ pokemonSkills }}:
+    <div class =" skills--separate" *ngFor="let skill of pokemon.moves | slice: 0:5">
+      <span class="skills--span">
+        {{ skill }}
+      </span>
+    </div>
+  </span>
+</div>

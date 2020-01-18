@@ -1,0 +1,10 @@
+@import '../../../styles.scss';
+h1,h3,p{
+    color:$light-yellow;
+}
+div{
+    text-align: center;
+}
+.image-control{
+    max-width: 600px;
+}

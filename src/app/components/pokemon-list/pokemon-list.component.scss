@@ -1,0 +1,21 @@
+@import '../../../styles.scss';
+.comp__pokemon-list--container {
+  .comp__pokemon-list--container-cards {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  .comp__pokemon-list-input {
+    border: none;
+    border-radius: 0.5em;
+    height: 1.5em;
+    padding-left: 1em;
+  }
+  .comp__pokemon-list-label {
+    color: $white;
+  }
+  .comp__pokemon-list--container-input{
+    text-align: center;
+    padding-top: 2em;
+  }
+}

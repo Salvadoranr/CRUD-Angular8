@@ -1,0 +1,19 @@
+<div  class="comp__update-pokemon-container-all">
+  <div class="comp__update-pokemon-container">
+    <app-pokemon-form
+      [id]="pokemon.id"
+      [moves]="pokemon.moves"
+      [name]="pokemon.name"
+      [image]="pokemon.image"
+      [weight]="pokemon.weight"
+      [type]="pokemon.type"
+      (formHandler)="onFormSubmit($event)"
+    ></app-pokemon-form>
+    <app-pokemon [pokemon]="pokemon"></app-pokemon>
+  </div>
+  <div class="comp__update-pokemon-container-move-right">
+    <button class="comp__update-pokemon-container--button" (click)="setPokemon()">
+      Update Pokemon
+    </button>
+  </div>
+</div>
