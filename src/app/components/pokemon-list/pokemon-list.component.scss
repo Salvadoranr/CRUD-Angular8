@@ -1,4 +1,3 @@
-@import '../../../styles.scss';
 .comp__pokemon-list--container {
   .comp__pokemon-list--container-cards {
     display: flex;
@@ -12,7 +11,7 @@
     padding-left: 1em;
   }
   .comp__pokemon-list-label {
-    color: $white;
+    color: white;
   }
   .comp__pokemon-list--container-input{
     text-align: center;

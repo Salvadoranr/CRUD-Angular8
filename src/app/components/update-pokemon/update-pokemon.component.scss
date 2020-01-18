@@ -1,4 +1,3 @@
-@import '../../../styles.scss';
 .comp__update-pokemon-container-all {
   min-height: 88vh;
   .comp__update-pokemon-container {
@@ -12,7 +11,7 @@
     .comp__update-pokemon-container--button {
       margin-top: 0.5em;
       margin-bottom: 2em;
-      background-color: $color-yellow;
+      background-color: #f1cd38;
       border: none;
       border-radius: 0.5em;
       padding: 0.5em;
