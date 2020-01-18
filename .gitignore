@@ -50,3 +50,6 @@ Thumbs.db
 
 #extract info mock
 /src/app/api/extract-info.js
+
+#package-lock
+package-lock.json
